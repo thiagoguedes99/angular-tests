@@ -13,6 +13,32 @@
 # Atualizar angular do projeto
 > ng update @angular/cli @angular/core
 
+# Remover tudo do jasmine e karma
+> npm remove @types/jasmine jasmine-core karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter
+
+# Instalar o jest para angular
+> npm install --save-dev jest jest-preset-angular @types/jest
+
+# Criar um arquivo `setup-jest.ts` na raiz da aplicação
+> setup-jest.ts
+
+# Adiciona este import no arquivo criado
+> import 'jest-preset-angular/setup-jest';
+
+# Criar o arquivo jest.config.js com as configurações para o jest rodar no angular
+> ver o arquivo **jest.config.js**
+
+# Adicionar types: ["jest"] no tsconfig.json
+> "types": ["jest"]
+
+# Trocar o type: ["jasmmine"] por types: ["jest"] no tsconfig.spec.json
+> "types": ["jasmine"]  por  "types": ["jest"]
+
+# Adiconar no package.json os comandos para rodar o jest
+> "types": ["jasmine"]  por  "types": ["jest"]
+
+
+
 
 <br />
 <br />
