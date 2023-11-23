@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should to snapshot 1`] = `
+<div
+  id="root1"
+>
+  <h1>
+    Hello, angular-tests
+  </h1>
+  <router-outlet />
+  
+</div>
+`;

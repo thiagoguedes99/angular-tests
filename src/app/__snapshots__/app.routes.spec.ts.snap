@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppRoutes should to match snapshot 1`] = `
+[
+  {
+    "component": [Function],
+    "path": "basic/counter",
+  },
+  {
+    "component": [Function],
+    "path": "basic/pokemmon",
+  },
+]
+`;

@@ -14,6 +14,14 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+  it('should to snapshot', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.nativeElement as HTMLElement;
+    fixture.detectChanges();
+
+    expect(component).toMatchSnapshot();
+  })
+
   it(`should have the 'angular-tests' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
