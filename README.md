@@ -1,3 +1,31 @@
+# Baixar ou atualizar a versão do node e do NPM
+> https://nodejs.org/en
+
+# Atualizar angular/cli da máquina
+> npm i -g @angular/cli
+
+# Desinstalar angular/cli da máquina
+> npm uninstall -g @angular/cli
+
+# Listar angular/cli da máquina
+> npm list -g @angular/cli
+
+# Atualizar angular do projeto
+> ng update @angular/cli @angular/core
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 # AngularTests
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
