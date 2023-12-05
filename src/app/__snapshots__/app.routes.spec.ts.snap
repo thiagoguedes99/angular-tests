@@ -8,6 +8,10 @@ exports[`AppRoutes should to match snapshot 1`] = `
   },
   {
     "component": [Function],
+    "path": "basic/counter/:initial",
+  },
+  {
+    "component": [Function],
     "path": "basic/pokemmon",
   },
   {

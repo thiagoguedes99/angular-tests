@@ -7,6 +7,30 @@ exports[`AppComponent should to snapshot 1`] = `
   <h1>
     Hello, angular-tests
   </h1>
+  <button
+    routerlinkactive="router-link-active"
+    tabindex="0"
+  >
+     baasic counter 
+  </button>
+  <button
+    routerlinkactive="router-link-active"
+    tabindex="0"
+  >
+     baasic counter param 
+  </button>
+  <button
+    routerlinkactive="router-link-active"
+    tabindex="0"
+  >
+     baasic request pokemon 
+  </button>
+  <button
+    routerlinkactive="router-link-active"
+    tabindex="0"
+  >
+     baasic input output father son 
+  </button>
   <router-outlet />
   
 </div>
