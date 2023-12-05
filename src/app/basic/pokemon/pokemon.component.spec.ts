@@ -16,6 +16,8 @@ const MockPokemonServiceService = {
 describe('PokemonComponent', () => {
   let component: PokemonComponent;
   let fixture: ComponentFixture<PokemonComponent>;
+  let compiled: HTMLBRElement;
+
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -34,10 +36,15 @@ describe('PokemonComponent', () => {
     fixture = TestBed.createComponent(PokemonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    compiled = fixture.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should to match snapshot', () => {
+    expect(compiled).toMatchSnapshot();
   });
 
   it('should to requets in ngOnInit function', () => {
@@ -61,5 +68,38 @@ describe('PokemonComponent', () => {
     component.ngOnInit();
 
     expect(MockPokemonServiceService.getPokemon).toHaveBeenCalledTimes(1);
+  });
+
+  it('should to update in html after fineshed request', () => {
+    const mockPokemon = {
+      name: 'mock_pokemon_component_html',
+      sprites: {
+        front_default: 'mock_photo_component_html'
+      }
+    }
+
+    mockReturnGetPokemon = mockPokemon;
+
+    component.ngOnInit();
+    fixture.detectChanges();
+
+    const h3  = compiled.querySelector('h3');
+    const img = compiled.querySelector('img');
+
+    expect( h3?.textContent ).toContain( mockPokemon.name.replace('m', 'M') );
+    expect( img?.src ).toBe( `http://localhost/${mockPokemon.sprites.front_default}` );
+    expect( img?.alt ).toBe( mockPokemon.name );
+
+  });
+
+  it('should to view loading h2 when not has charizard', () => {
+    component.charizard = undefined;
+
+    fixture.detectChanges();
+
+    const h2  = compiled.querySelector('h2');
+    console.log(compiled.innerHTML)
+
+    expect( h2?.textContent ).toContain('Loading...');
   });
 });
