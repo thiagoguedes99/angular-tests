@@ -10,5 +10,9 @@ exports[`AppRoutes should to match snapshot 1`] = `
     "component": [Function],
     "path": "basic/pokemmon",
   },
+  {
+    "component": [Function],
+    "path": "basic/family",
+  },
 ]
 `;
